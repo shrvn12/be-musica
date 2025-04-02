@@ -20,7 +20,6 @@ app.get('/jiosaavn-data', async (req, res) => {
     }
 });
 
-const PORT = 5000;
-app.listen(PORT, () => {
-    console.log(`Proxy server running on port ${PORT}`);
-});
+module.exports = (req, res) => {
+    app(req, res);
+};
